@@ -53,6 +53,9 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Logs
+*.log
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
@@ -81,6 +84,8 @@ ENV/
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
@@ -154,6 +159,10 @@ test_*.db
 .coverage
 htmlcov/
 
+# Virtual environments
+venv/
+env/
+ENV/
 # Logs
 *.log
 *.log
