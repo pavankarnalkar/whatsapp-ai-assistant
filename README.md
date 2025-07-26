@@ -26,9 +26,11 @@ Run the setup script to install all dependencies:
 ```
 
 This will:
-- Clone the WhatsApp MCP repository
+- Initialize the WhatsApp MCP submodule
 - Install Go dependencies
 - Install Python dependencies (including uv package manager)
+
+**Note**: If you cloned this repository, the WhatsApp MCP submodule is automatically included. The setup script will ensure it's properly initialized.
 
 ### 2. Start WhatsApp Bridge
 

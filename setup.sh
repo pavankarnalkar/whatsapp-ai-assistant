@@ -7,13 +7,9 @@ set -e
 
 echo "🚀 Setting up WhatsApp MCP Server..."
 
-# Check if already cloned
-if [ ! -d "whatsapp-mcp" ]; then
-    echo "📥 Cloning whatsapp-mcp repository..."
-    git clone https://github.com/lharries/whatsapp-mcp.git
-else
-    echo "✅ whatsapp-mcp repository already exists"
-fi
+# Initialize and update submodules
+echo "📥 Initializing WhatsApp MCP submodule..."
+git submodule update --init --recursive
 
 cd whatsapp-mcp
 
