@@ -26,17 +26,22 @@ git clone https://github.com/pavankarnalkar/whatsapp-ai-assistant.git
 cd whatsapp-ai-assistant
 ```
 
-2. Run the setup script:
+2. Validate your setup (optional but recommended):
+```bash
+python3 validate_setup.py
+```
+
+3. Run the setup script:
 ```bash
 ./setup_tunnel.sh
 ```
 
-3. Configure your environment:
+4. Configure your environment:
    - The script will create a `.env` file from the template
    - Add your ngrok auth token (required)
    - Optionally configure MCP server URL and other settings
 
-4. The script will automatically:
+5. The script will automatically:
    - Install Python dependencies
    - Start the webhook server
    - Create an ngrok tunnel
@@ -156,6 +161,20 @@ https://your-ngrok-url.ngrok.io/webhook
 | `WEBHOOK_PORT` | No | `5000` | Port for the webhook server |
 | `NGROK_SUBDOMAIN` | No | - | Custom subdomain (paid plans only) |
 | `FLASK_DEBUG` | No | `False` | Enable Flask debug mode |
+
+## Validation
+
+Before setting up the tunnel, you can validate your configuration:
+
+```bash
+python3 validate_setup.py
+```
+
+This will check:
+- Required Python dependencies
+- Environment configuration
+- ngrok availability
+- Webhook server functionality
 
 ## Development
 
