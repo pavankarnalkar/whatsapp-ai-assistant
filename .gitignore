@@ -1,3 +1,9 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite database files
 # Python
 __pycache__/
 *.py[cod]
@@ -42,6 +48,12 @@ ENV/
 *.sqlite
 *.sqlite3
 
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE files
 # IDE
 # Ignore WhatsApp MCP database files
 whatsapp-mcp/whatsapp-bridge/store/
@@ -88,6 +100,12 @@ uv.lock
 *.swp
 *.swo
 
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test_*.db
 # Testing
 .pytest_cache/
 .coverage
