@@ -22,6 +22,7 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -42,6 +43,17 @@ venv.bak/
 venv/
 env/
 ENV/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Database
 *.db
@@ -112,6 +124,7 @@ test_*.db
 htmlcov/
 
 # Logs
+*.log
 *.log
 # Logs
 *.log
