@@ -27,6 +27,31 @@ class TypingSimulator:
         current_chunk = ""
         
         for sentence in sentences:
+            # If this single sentence is too long, split it at word boundaries
+            if len(sentence) > self.config.MAX_MESSAGE_LENGTH:
+                # Split the long sentence into smaller parts
+                words = sentence.split()
+                temp_chunk = ""
+                
+                for word in words:
+                    if len(temp_chunk) + len(word) + 1 > self.config.MAX_MESSAGE_LENGTH:
+                        if temp_chunk:
+                            chunks.append(temp_chunk.strip())
+                        temp_chunk = word
+                    else:
+                        temp_chunk += " " + word if temp_chunk else word
+                
+                if temp_chunk:
+                    # If we have a current_chunk, try to merge or add separately
+                    if current_chunk and len(current_chunk) + len(temp_chunk) <= self.config.MAX_MESSAGE_LENGTH:
+                        current_chunk += " " + temp_chunk
+                    else:
+                        if current_chunk:
+                            chunks.append(current_chunk.strip())
+                            current_chunk = ""
+                        chunks.append(temp_chunk.strip())
+                continue
+            
             # If adding this sentence would exceed max length, save current chunk
             if len(current_chunk) + len(sentence) > self.config.MAX_MESSAGE_LENGTH:
                 if current_chunk:
