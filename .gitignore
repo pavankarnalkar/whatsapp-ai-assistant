@@ -32,6 +32,57 @@ env.bak/
 venv.bak/
 
 # IDE
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+# Ignore WhatsApp MCP database files
+whatsapp-mcp/whatsapp-bridge/store/
+*.db
+*.db-journal
+
+# Ignore generated configuration
+claude_config.json
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Ignore uv lock files in the main directory
+uv.lock
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore logs
+*.log
+
+# Ignore IDE files
 .vscode/
 .idea/
 *.swp
@@ -44,3 +95,16 @@ htmlcov/
 
 # Logs
 *.log
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+# Ignore temporary files
+tmp/
+temp/
+.tmp/
