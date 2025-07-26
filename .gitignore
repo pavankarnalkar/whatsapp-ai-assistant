@@ -53,6 +53,9 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
+
+# Virtual environments
 
 # Logs
 *.log
@@ -73,6 +76,13 @@ ENV/
 env.bak/
 venv.bak/
 
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
 # IDE
 # Virtual environment
 venv/
@@ -88,6 +98,20 @@ ENV/
 *.swp
 *.swo
 
+# MacOS
+.DS_Store
+
+# Temporary files
+/tmp/
+*.tmp
+*.temp
+
+# Docker
+.dockerignore
+
+# Deployment
+.env.production
+.env.local
 # OS
 .DS_Store
 Thumbs.db
