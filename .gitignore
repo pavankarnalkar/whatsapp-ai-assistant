@@ -63,6 +63,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# Virtual environments
 # Environment
 .env
 .venv
@@ -91,6 +92,18 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Logs
+*.log
+
+# ngrok
+ngrok
+ngrok.exe
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
 # Database
 *.db
 *.sqlite
