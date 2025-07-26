@@ -1,8 +1,42 @@
+# Environment variables
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite database files
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -22,6 +56,18 @@ wheels/
 MANIFEST
 
 # Virtual environments
+
+# Logs
+*.log
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+# Environment
 .env
 .venv
 env/
@@ -37,6 +83,14 @@ venv.bak/
 
 # Logs
 *.log
+# IDE
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
 
 # IDE
 .vscode/
@@ -58,3 +112,107 @@ venv.bak/
 # Deployment
 .env.production
 .env.local
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# ngrok
+ngrok
+ngrok.exe
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE files
+# IDE
+# Ignore WhatsApp MCP database files
+whatsapp-mcp/whatsapp-bridge/store/
+*.db
+*.db-journal
+
+# Ignore generated configuration
+claude_config.json
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Ignore uv lock files in the main directory
+uv.lock
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore logs
+*.log
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test_*.db
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+env/
+ENV/
+# Logs
+*.log
+*.log
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+# Ignore temporary files
+tmp/
+temp/
+.tmp/
