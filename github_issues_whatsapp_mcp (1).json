@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Set up whatsapp-mcp server locally",
+    "body": "Clone the https://github.com/lharries/whatsapp-mcp repository.\nInstall dependencies and run the MCP server.\nScan the WhatsApp QR code to authenticate your personal number.",
+    "labels": [
+      "whatsapp-mcp",
+      "setup",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Build webhook listener for MCP messages",
+    "body": "Create a Flask/FastAPI endpoint to receive new message payloads from whatsapp-mcp.\nParse sender ID, chat ID, timestamp, and message text.\nStore each message to SQLite.",
+    "labels": [
+      "backend",
+      "integration",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Send message replies using MCP REST API",
+    "body": "Create a function to send messages via the MCP `/message` endpoint.\nSupport recipient ID and text body.\nTest with a static reply to incoming messages.",
+    "labels": [
+      "backend",
+      "integration",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Store and retrieve chat history from SQLite",
+    "body": "Set up a SQLite table to store messages (chat_id, sender, timestamp, content).\nAdd functions to fetch the last 50 messages by chat_id.",
+    "labels": [
+      "database",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Integrate OpenAI GPT for summarization and Q&A",
+    "body": "Create an LLM client for GPT-3.5 via OpenAI API.\nUse it to summarize recent messages or answer a user's question.",
+    "labels": [
+      "llm",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Auto-reply to specific triggers (e.g. 'help', 'summary')",
+    "body": "Detect keywords in incoming messages and reply with predefined or GPT-generated responses.\nSupport '/summary' to summarize the chat.",
+    "labels": [
+      "bot-logic",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Detect urgent messages and trigger email notifications",
+    "body": "Implement a simple urgency detector using keywords ('urgent', 'asap', etc).\nSend an email alert using SMTP if an urgent message is received.",
+    "labels": [
+      "notification",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Stream responses from GPT to simulate typing",
+    "body": "For long messages, simulate typing with a delay or send multiple parts.\nOptionally add 'typing...' indicator via MCP.",
+    "labels": [
+      "llm",
+      "ux",
+      "enhancement"
+    ]
+  },
+  {
+    "title": "Run ngrok tunnel and connect webhook to MCP",
+    "body": "Use ngrok to expose local webhook to MCP.\nUpdate MCP's config to use your ngrok URL as the webhook target.",
+    "labels": [
+      "devops",
+      "copilot-prompt-ready"
+    ]
+  },
+  {
+    "title": "Deploy backend on Railway or Fly.io",
+    "body": "Prepare Dockerfile and deploy the assistant backend to Railway or Fly.io.\nEnsure MCP can still reach it via HTTPS webhook.",
+    "labels": [
+      "deployment",
+      "copilot-prompt-ready"
+    ]
+  }
+]
