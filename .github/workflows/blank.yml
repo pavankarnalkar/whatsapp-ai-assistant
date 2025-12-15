@@ -34,3 +34,23 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      # Create example files for demonstration
+      - name: Create example files
+        run: |
+          mkdir -p build-output
+          echo "Build completed at $(date)" > build-output/build-info.txt
+          echo "Example build artifact" > build-output/artifact.txt
+      
+      # Upload artifacts to GitHub Actions
+      # LOCATION: Artifacts are uploaded to GitHub Actions and can be accessed at:
+      # https://github.com/{owner}/{repo}/actions/runs/{run_id}
+      # They are stored for 90 days by default and can be downloaded from the workflow run page
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: build-output/
+          retention-days: 90  # Files are kept for 90 days
+          # The uploaded files can be found at:
+          # Repository → Actions → Select workflow run → Artifacts section at bottom of page
