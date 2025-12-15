@@ -76,7 +76,7 @@ You can customize retention in your workflow:
 Default retention can be configured at the repository level:
 1. Repository Settings → Actions → General
 2. Scroll to "Artifact and log retention"
-3. Set default retention period (1-400 days for enterprises, 1-90 for others)
+3. Set default retention period (1-90 days, with higher limits available for enterprise accounts)
 
 ## Important Notes
 
@@ -117,13 +117,15 @@ jobs:
           retention-days: 30
 ```
 
-## Finding This Repository's Artifacts
+## Finding Artifacts for Your Repository
 
-For the `whatsapp-ai-assistant` repository, artifacts from CI runs can be found at:
+Artifacts from CI runs can be found at:
 
 ```
-https://github.com/pavankarnalkar/whatsapp-ai-assistant/actions
+https://github.com/{owner}/{repo}/actions
 ```
+
+Replace `{owner}` with the repository owner and `{repo}` with the repository name.
 
 Select any workflow run, and scroll to the bottom to see available artifacts.
 
